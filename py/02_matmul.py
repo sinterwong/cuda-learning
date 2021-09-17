@@ -46,6 +46,7 @@ def matmul_shared_mem_gpu(A, B, C):
         cuda.syncthreads()
         for j in range(TPB):
             tmp += sA[tx, j] * sB[j, ty]
+        # 一定要加上同步，否则CPU不会等你执行完
         cuda.syncthreads()
 
     C[x, y] = tmp
@@ -81,13 +82,15 @@ print("create grid cost: {} s".format(time.time() - start_time))
 
 ####### GPU #######
 start_time = time.time()
-matmul_gpu[blacks_per_grid, threads_per_block](A_global_mem, B_global_mem, C_global_mem)
+matmul_gpu[blacks_per_grid, threads_per_block](
+    A_global_mem, B_global_mem, C_global_mem)
 cuda.synchronize()
 print("gpu cost: {} s".format(time.time() - start_time))
 
 
 ####### GPU shared mem #######
 start_time = time.time()
-matmul_shared_mem_gpu[blacks_per_grid, threads_per_block](A_global_mem, B_global_mem, C_shared_mem)
+matmul_shared_mem_gpu[blacks_per_grid, threads_per_block](
+    A_global_mem, B_global_mem, C_shared_mem)
 cuda.synchronize()
 print("gpu cost: {} s".format(time.time() - start_time))
