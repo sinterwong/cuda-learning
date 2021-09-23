@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // (A+B)/2=C
-#define N (1024 * 1024) // 每个stream执行数据的大小
+#define N (4096 * 4096) // 每个stream执行数据的大小
 #define FULL (N * 20)   // 全部数据的大小
 
 __global__ void kernel(int *a, int *b, int *c)
@@ -57,6 +57,9 @@ int main(int argc, char const *argv[])
     cudaMalloc((void **)&dev_a, N * sizeof(int));
     cudaMalloc((void **)&dev_b, N * sizeof(int));
     cudaMalloc((void **)&dev_c, N * sizeof(int));
+    // cudaHostAlloc((void **)&dev_a, N * sizeof(int), cudaHostAllocDefault);
+    // cudaHostAlloc((void **)&dev_b, N * sizeof(int), cudaHostAllocDefault);
+    // cudaHostAlloc((void **)&dev_c, N * sizeof(int), cudaHostAllocDefault);
 
     // 为A和B赋值
     for (int i = 0; i < FULL; i++)

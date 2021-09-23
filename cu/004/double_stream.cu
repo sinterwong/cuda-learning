@@ -95,7 +95,7 @@ int main(int argc, char const *argv[])
     cudaEventElapsedTime(&elapsed, start, end);
     printf("cost time: %3.3f ms\n", elapsed);
 
-    // relased resources
+    // relased resources 
     cudaStreamDestroy(stream1);
     cudaStreamDestroy(stream2);
     cudaFree(dev_a1);
