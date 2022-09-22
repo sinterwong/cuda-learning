@@ -1,0 +1,143 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "3rdparty",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "3rdparty"
+				},
+				{
+					"build" : "tests",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "tests",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "BasicLearning"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "BasicLearning3rdparty",
+					"parentIndex" : 0
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "Tests",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "array_sum::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-array_sum-Debug-3bbaf2eeb6262b6046bf.json",
+					"name" : "array_sum",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "cublas_base::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-cublas_base-Debug-559c6e25eab33ba80081.json",
+					"name" : "cublas_base",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "double_stream::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-double_stream-Debug-fc0e1a9d2f0687ee922f.json",
+					"name" : "double_stream",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "global_add_vector::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-global_add_vector-Debug-9d8e14fe8cb1cfda1d2d.json",
+					"name" : "global_add_vector",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "single_stream::@a44f0ac069e85531cdee",
+					"jsonFile" : "target-single_stream-Debug-3284a0a0071ae85ddbf8.json",
+					"name" : "single_stream",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/wangxt/workspace/projects/cuda-learning/build",
+		"source" : "/home/wangxt/workspace/projects/cuda-learning"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
