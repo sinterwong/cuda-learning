@@ -1,6 +1,0 @@
-# Hashes of file build rules.
-d04c1d5d936706234a95629fa9f24d22 tests/CMakeFiles/array_sum.dir/array_sum_generated_array_sum.cu.o
-d218c9f1f38378038aa501461a210195 tests/CMakeFiles/cublas_base.dir/cublas_base_generated_cublas_base.cu.o
-8edf2ae9123b57d8bff503ddf32047ab tests/CMakeFiles/double_stream.dir/double_stream_generated_double_stream.cu.o
-44fe429c75fb7753b0533d6121b52d2b tests/CMakeFiles/global_add_vector.dir/global_add_vector_generated_global_add_vector.cu.o
-64e31469532dd96f25b91031acf3320f tests/CMakeFiles/single_stream.dir/single_stream_generated_single_stream.cu.o
