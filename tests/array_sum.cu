@@ -50,7 +50,7 @@ int main(int argc, char **argv) {
 
   cudaMemcpy(d_data, data.begin(), size, cudaMemcpyHostToDevice);
   
-  arraySum<<<blockPerGrid, threadsPerBlock>>>(d_data, d_ret, numElements);
+  arraySum<<<blockPerGrid, threadsPerBlock>>>(d_data, d_ret);
   cudaMemcpy(ret.begin(), d_ret, blockPerGrid * sizeof(float), cudaMemcpyDeviceToHost);
 
   int result = std::accumulate(ret.begin(), ret.end(), 0);
